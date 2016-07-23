@@ -1,8 +1,17 @@
-CFLAGS=-Wall -g
+CC = gcc
+CFLAGS= -l ncurses -I$(IDIR)
+
+IDIR    = ./include/
+SRCDIR  = ./src/
+SOURCES = $(SRCDIR)*.c
+
+all: rogue run clean
+
+rogue:
+	$(CC) $(SOURCES) $(CFLAGS) -o $@
+
+run:
+	./rogue
 
 clean:
-	rm -f main
-
-create:
-	make clean
-	gcc main.c -l ncurses -o rogue
+	rm rogue
