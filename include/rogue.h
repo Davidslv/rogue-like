@@ -27,14 +27,17 @@ typedef struct Player {
 
 int screenSetup();
 
-// room functions
+// level functions
 Room ** mapSetup();
+char ** saveLevelPositions();
+
 Room * createRoom(int y, int x, int height, int width);
 int drawRoom(Room * room);
 int connectDoors(Position * doorOne, Position * doorTwo);
 
+// player functions
 Player * playerSetup();
-int handleInput(int input, Player * player);
-int playerMove(int y, int x, Player * player);
-int checkPlayerPosition(int newY, int newX, Player * player);
+Position * handleInput(int input, Player * player);
+int checkPlayerPosition(Position * newPosition, Player * player, char ** level);
+int playerMove(Position * newPosition, Player * player, char ** level);
 #endif

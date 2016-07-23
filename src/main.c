@@ -3,16 +3,23 @@
 int main() {
   Player * player;
   int ch;
+  Position * newPosition;
+
+  char ** level;
+
   screenSetup();
 
   mapSetup();
+
+  level = saveLevelPositions();
 
   player = playerSetup();
 
   // main game loop
   // until user presses 'q' key
   while((ch = getch()) != 'q') {
-    handleInput(ch, player);
+    newPosition = handleInput(ch, player);
+    checkPlayerPosition(newPosition, player, level);
   }
   endwin();
 
