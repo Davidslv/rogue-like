@@ -5,6 +5,17 @@
 #include <ncurses.h>
 #include <time.h>
 
+typedef struct Level {
+  int level;
+  char ** tiles;
+
+  int numberOfRooms;
+  int numberOfMonsters;
+
+  struct Room ** rooms;
+  struct Monster ** monsters;
+} Level;
+
 typedef struct Position {
   int x, y;
 } Position;
@@ -25,11 +36,24 @@ typedef struct Player {
   int health;
 } Player;
 
+typedef struct Monster {
+  Position position;
+
+  char symbol;
+  int health;
+  int attack;
+  int defence;
+  int speed;
+  int pathfinding;
+
+} Monster;
+
 int screenSetup();
 
 // level functions
-Room ** mapSetup();
+Room ** roomsSetup();
 char ** saveLevelPositions();
+Level * createLevel(int level);
 
 Room * createRoom(int y, int x, int height, int width);
 int drawRoom(Room * room);
