@@ -55,6 +55,7 @@ Room ** roomsSetup();
 char ** saveLevelPositions();
 Level * createLevel(int level);
 
+// room functions
 Room * createRoom(int y, int x, int height, int width);
 int drawRoom(Room * room);
 int connectDoors(Position * doorOne, Position * doorTwo);
@@ -64,4 +65,12 @@ Player * playerSetup();
 Position * handleInput(int input, Player * player);
 int checkPlayerPosition(Position * newPosition, Player * player, char ** level);
 int playerMove(Position * newPosition, Player * player, char ** level);
+
+// monster functions
+int addMonsters(Level * level);
+Monster * selectMonster(int level);
+Monster * createMonster(char symbol, int health, int attack,
+                        int speed, int defence, int pathfinding);
+
+int setStartingPosition(Monster * monster, Room * room);
 #endif
