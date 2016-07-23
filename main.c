@@ -1,6 +1,16 @@
 #include <stdlib.h>
 #include <ncurses.h>
 
+typedef struct Room {
+  int xPosition;
+  int yPosition;
+  int height;
+  int width;
+
+  // Monster ** monsters;
+  // Item ** items;
+} Room;
+
 typedef struct Player {
   int xPosition;
   int yPosition;
@@ -8,7 +18,11 @@ typedef struct Player {
 } Player;
 
 int screenSetup();
-int mapSetup();
+
+// room functions
+Room ** mapSetup();
+Room * createRoom(int y, int x, int height, int width);
+int drawRoom(Room * room);
 
 Player * playerSetup();
 int handleInput(int input, Player * player);
@@ -43,28 +57,58 @@ int screenSetup() {
   return 1;
 }
 
-int mapSetup() {
-  // y, x, chars
-  mvprintw(13, 13, "--------");
-  mvprintw(14, 13, "|......|");
-  mvprintw(15, 13, "|......|");
-  mvprintw(16, 13, "|......|");
-  mvprintw(17, 13, "|......|");
-  mvprintw(18, 13, "--------");
+// room functions
+Room * createRoom(int y, int x, int height, int width) {
+  Room * newRoom;
+  newRoom = malloc(sizeof(Room));
 
-  mvprintw(3, 40, "--------");
-  mvprintw(4, 40, "|......|");
-  mvprintw(5, 40, "|......|");
-  mvprintw(6, 40, "|......|");
-  mvprintw(7, 40, "|......|");
-  mvprintw(8, 40, "--------");
+  newRoom->xPosition = x;
+  newRoom->yPosition = y;
 
-  mvprintw(10, 40, "------------");
-  mvprintw(11, 40, "|..........|");
-  mvprintw(12, 40, "|..........|");
-  mvprintw(13, 40, "|..........|");
-  mvprintw(14, 40, "|..........|");
-  mvprintw(15, 40, "------------");
+  newRoom->height = height;
+  newRoom->width = width;
+
+  return newRoom;
+}
+
+Room ** mapSetup() {
+  Room ** rooms;
+  rooms = malloc(sizeof(Room) * 6);
+
+  rooms[0] = createRoom(13, 13, 6, 8);
+  drawRoom(rooms[0]);
+
+  rooms[1] = createRoom(2, 40, 6, 8);
+  drawRoom(rooms[1]);
+
+  rooms[2] = createRoom(10, 40, 6, 12);
+  drawRoom(rooms[2]);
+
+  return rooms;
+}
+
+int drawRoom(Room * room) {
+  int x, y;
+
+  // top and bottom
+  for (x = room->xPosition; x < room->xPosition + room->width; x++) {
+    // top
+    mvprintw(room->yPosition, x, "-");
+    // bottom
+    mvprintw(room->yPosition + room->height -1, x, "-");
+  }
+
+  // floor & side walls
+  for (y = room->yPosition + 1; y < room->yPosition + room->height - 1; y++) {
+    // draw side walls
+    mvprintw(y, room->xPosition, "|");
+    mvprintw(y, room->xPosition + room->width - 1, "|");
+
+    // draw floors
+    for (x = room->xPosition + 1; x < room->xPosition + room->width - 1; x++) {
+      mvprintw(y, x, ".");
+    }
+  }
 
   return 1;
 }
