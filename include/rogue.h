@@ -32,12 +32,12 @@ typedef struct Room {
 } Room;
 
 typedef struct Player {
-  Position position;
+  Position * position;
   int health;
 } Player;
 
 typedef struct Monster {
-  Position position;
+  Position * position;
 
   char symbol;
   int health;

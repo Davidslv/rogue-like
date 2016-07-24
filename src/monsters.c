@@ -54,6 +54,7 @@ Monster * createMonster(char symbol, int health, int attack,
                         int speed, int defence, int pathfinding) {
   Monster * newMonster;
   newMonster = malloc(sizeof(Monster));
+  newMonster->position = malloc(sizeof(Position));
 
   newMonster->symbol = symbol;
   newMonster->health = health;
@@ -68,11 +69,11 @@ Monster * createMonster(char symbol, int health, int attack,
 int setStartingPosition(Monster * monster, Room * room) {
   char buffer[8];
 
-  monster->position.x = (rand() % (room->width - 2)) + room->position.x + 1;
-  monster->position.y = (rand() % (room->height - 2)) + room->position.y + 1;
+  monster->position->x = (rand() % (room->width - 2)) + room->position.x + 1;
+  monster->position->y = (rand() % (room->height - 2)) + room->position.y + 1;
 
   sprintf(buffer, "%c", monster->symbol);
 
-  mvprintw(monster->position.y, monster->position.x, buffer);
+  mvprintw(monster->position->y, monster->position->x, buffer);
   return 1;
 }
