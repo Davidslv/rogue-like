@@ -63,17 +63,62 @@ Monster * createMonster(char symbol, int health, int attack,
   newMonster->defence = defence;
   newMonster->pathfinding = pathfinding;
 
+  sprintf(newMonster->string, "%c", symbol);
+
   return newMonster;
 }
 
 int setStartingPosition(Monster * monster, Room * room) {
-  char buffer[8];
-
   monster->position->x = (rand() % (room->width - 2)) + room->position.x + 1;
   monster->position->y = (rand() % (room->height - 2)) + room->position.y + 1;
 
-  sprintf(buffer, "%c", monster->symbol);
+  mvprintw(monster->position->y, monster->position->x, monster->string);
+  return 1;
+}
 
-  mvprintw(monster->position->y, monster->position->x, buffer);
+int moveMonsters(Level * level) {
+
+  for (int x = 0; x < level->numberOfMonsters ; x++) {
+
+    if (level->monsters[x]->pathfinding == 1) {
+      // random
+    }
+    else {
+      Monster * monster = level->monsters[x];
+
+      pathfindingSeek(monster->position, level->player->position);
+      mvprintw(monster->position->y, monster->position->y, monster->string);
+    }
+    
+  }
+
+  return 1;
+}
+
+// TODO: Refactor for DRY
+int pathfindingSeek(Position * start, Position * destination) {
+  // step left
+  if ((abs((start->x - 1) - destination->x) < abs(start->x - destination->x)) && (mvinch(start->y, start->x - 1) == '.')) {
+    start->x = start->x - 1;
+  }
+  // step right
+  else if ((abs((start->x + 1) - destination->x) < abs(start->x - destination->x)) && (mvinch(start->y, start->x + 1) == '.'))
+  {
+    start->x = start->x + 1;
+  }
+  // step down
+  else if ((abs((start->y + 1) - destination->y) < abs(start->y - destination->y)) && (mvinch(start->y + 1, start->x) == '.'))
+  {
+    start->y = start->y + 1;
+  }
+  // step up
+  else if ((abs((start->y - 1) - destination->y) < abs(start->y - destination->y)) && (mvinch(start->y - 1, start->x) == '.'))
+  {
+    start->y = start->y - 1;
+  }
+  else {
+    // do nothing
+  }
+
   return 1;
 }

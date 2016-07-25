@@ -11,13 +11,14 @@ int main() {
 
   level = createLevel(1);
 
-  player = playerSetup();
-
   // main game loop
   // until user presses 'q' key
   while((ch = getch()) != 'q') {
     newPosition = handleInput(ch, player);
+
     checkPlayerPosition(newPosition, player, level->tiles);
+
+    moveMonsters(level);
   }
   endwin();
 
