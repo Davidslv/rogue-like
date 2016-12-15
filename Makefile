@@ -5,7 +5,7 @@ IDIR    = ./include/
 SRCDIR  = ./src/
 SOURCES = $(SRCDIR)*.c
 
-all: rogue run clean
+play: rogue run clean
 
 rogue:
 	$(CC) $(SOURCES) $(CFLAGS) -o $@

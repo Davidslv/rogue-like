@@ -11,3 +11,20 @@ to C++, this is my attempt on understanding the game, C language and develop my 
 
 Hopefully I will manage to have it in a playable state, but no promisses.
 
+
+# How to run the game?
+
+```
+  make play
+```
+
+# Which gcc version are you using?
+
+I'm using gcc 4.2.1
+
+```
+$ gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 8.0.0 (clang-800.0.38)
+Target: x86_64-apple-darwin15.6.0
+```
