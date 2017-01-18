@@ -1,7 +1,7 @@
 #include "rogue.h"
 
 int main() {
-  Player * player;
+  Player * player = playerSetup();
   int ch;
   Position * newPosition;
 
@@ -35,4 +35,3 @@ int screenSetup() {
 
   return 1;
 }
-
