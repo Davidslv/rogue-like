@@ -31,7 +31,7 @@ Target: x86_64-apple-darwin15.6.0
 ```
 
 
-## References
+## References
 
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page
 - http://pcg.wikidot.com/pcg-games:roguespe
