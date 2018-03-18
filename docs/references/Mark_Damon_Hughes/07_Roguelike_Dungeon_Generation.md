@@ -1,4 +1,4 @@
-# Game Design: Article 07: Roguelike Dungeon Generation
+# Game Design: Article 07: Roguelike Dungeon Generation
 
 By Mark Damon Hughes <kamikaze@kuoi.asui.uidaho.edu>
 
