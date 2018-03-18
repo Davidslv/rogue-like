@@ -33,9 +33,18 @@ Target: x86_64-apple-darwin15.6.0
 
 ## References
 
+- [Reference docs](docs/references)
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page
 - http://pcg.wikidot.com/pcg-games:roguespe
 - http://pcg.wikidot.com/pcg-algorithm:maze
 - http://pcg.wikidot.com/pcg-algorithm:dungeon-generation
 - https://gamedev.stackexchange.com/
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Dungeon-Building_Algorithm
+
+
+# Contribution
+
+Please feel free to help me building this game from scratch.
+
+Your contributions can come in code as well as helping me to find more references to this game,
+any kind of resources that you find that are connected to this game is appreciated.
