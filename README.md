@@ -5,7 +5,8 @@ This is my pet project where I intend to accomplish two goals:
 - Learn C/C++
 - Learn about Game Development
 
-Of course this will be highly based on the original game, [Rogue](https://en.wikipedia.org/wiki/Rogue_(video_game).
+Of course this will be highly based on the original game, [Rogue](https://en.wikipedia.org/wiki/Rogue_(video_game)).
+
 I've read parts of its [source code](https://github.com/davidslv/rogue) and if I manage to be skilled enough I want to port it
 to C++, this is my attempt on understanding the game, C language and develop my C++ knowledge.
 
@@ -28,3 +29,13 @@ Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-
 Apple LLVM version 8.0.0 (clang-800.0.38)
 Target: x86_64-apple-darwin15.6.0
 ```
+
+
+## References
+
+- http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page
+- http://pcg.wikidot.com/pcg-games:roguespe
+- http://pcg.wikidot.com/pcg-algorithm:maze
+- http://pcg.wikidot.com/pcg-algorithm:dungeon-generation
+- https://gamedev.stackexchange.com/
+- http://roguebasin.roguelikedevelopment.org/index.php?title=Dungeon-Building_Algorithm
