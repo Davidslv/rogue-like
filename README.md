@@ -42,7 +42,7 @@ Target: x86_64-apple-darwin15.6.0
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Dungeon-Building_Algorithm
 
 
-# Contribution
+# Contribution
 
 Please feel free to help me building this game from scratch.
 
