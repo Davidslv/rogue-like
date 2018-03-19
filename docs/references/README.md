@@ -7,3 +7,4 @@ so the purpose of this folder is to, whenever possible, store it for future refe
 
 - [Mark Damon Hughes](docs/references/Mark_Damon_Hughes)
 - [Jeff Lait - Youtube](https://www.youtube.com/watch?v=K8dxc807R-4)
+- [Jeff Lait - Website](http://www.zincland.com/powder/index.php?pagename=about)
