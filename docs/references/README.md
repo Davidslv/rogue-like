@@ -12,3 +12,4 @@ so the purpose of this folder is to, whenever possible, store it for future refe
 - [PeteyCodes - Coding a Roguelike in C](https://www.youtube.com/channel/UC2F3TsznV6-MSDte8yX3T8A)
 - [PICO-8 ZINE #4 - Special Roguelike ](https://sectordub.itch.io/pico-8-fanzine-4)
 - [Tech Toolbox for Game Programmers](https://www.youtube.com/watch?v=W_okgL6HJX8)
+- [Roguelike Lessons in Design](https://www.youtube.com/watch?v=5Bl1mTE5jFM)
