@@ -14,3 +14,4 @@ so the purpose of this folder is to, whenever possible, store it for future refe
 - [Tech Toolbox for Game Programmers](https://www.youtube.com/watch?v=W_okgL6HJX8)
 - [Roguelike Lessons in Design](https://www.youtube.com/watch?v=5Bl1mTE5jFM)
 - [5min of Roguelike in Unity 3D](https://www.codingblocks.net/videos/mini-code-adventure-creating-a-roguelike-in-unity3d-and-c/#more-2589)
+- [Roguesharp - A C# Library](https://bitbucket.org/FaronBracy/roguesharp)
