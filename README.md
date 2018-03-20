@@ -34,6 +34,7 @@ Target: x86_64-apple-darwin15.6.0
 ## References
 
 - [Reference docs](docs/references)
+- [Rogue panel - Glenn Wichman, Michael Toy & Ken Arnold](https://www.youtube.com/watch?v=4IkrZkUV01I)
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page
 - http://pcg.wikidot.com/pcg-games:roguespe
 - http://pcg.wikidot.com/pcg-algorithm:maze
