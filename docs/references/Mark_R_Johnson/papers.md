@@ -1,0 +1,2 @@
+- https://ualberta.academia.edu/MarkRJohnson
+- [Procedural Worlds, Handmade Details](https://www.youtube.com/watch?v=Z_1T6f2ThzI)
