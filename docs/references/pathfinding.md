@@ -1,5 +1,9 @@
 # A* Pathfinding References
 
+A* Pathfinding will find the shortest path quicker by searching
+less positions and ranking each position found by how close it is
+to the goal. This is done with a priority queue data structure.
+
 - [Introduction to A*](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
 - [Introduction to A* Pathfinding](https://www.raywenderlich.com/4946/introduction-to-a-pathfinding)
 - [Red Blob Games Website](https://www.redblobgames.com/)
