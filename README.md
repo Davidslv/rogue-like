@@ -41,7 +41,7 @@ Target: x86_64-apple-darwin15.6.0
 - http://pcg.wikidot.com/pcg-algorithm:dungeon-generation
 - https://gamedev.stackexchange.com/
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Dungeon-Building_Algorithm
-
+- https://roguelike.club/roguelikes.html
 
 # Contribution
 
