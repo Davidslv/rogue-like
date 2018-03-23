@@ -1,5 +1,7 @@
 language: ruby
 rvm:
   - 2.4.0
+before_install:
+  - cd ruby
 script:
-  - bundle exec rspec ruby/spec
+  - bundle exec rspec spec
