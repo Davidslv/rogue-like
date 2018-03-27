@@ -5,7 +5,7 @@ Level * createLevel(int level) {
   newLevel = malloc(sizeof(Level));
 
   newLevel->level = level;
-  newLevel->numberOfRooms = 3;
+  newLevel->numberOfRooms = 5;
   newLevel->rooms = roomsSetup();
   newLevel->tiles = saveLevelPositions();
 
@@ -18,19 +18,33 @@ Level * createLevel(int level) {
 
 Room ** roomsSetup() {
   Room ** rooms;
-  rooms = malloc(sizeof(Room) * 6);
+  rooms = malloc(sizeof(Room) * 8);
 
-  rooms[0] = createRoom(13, 13, 6, 8);
+  // createRoom(y, x, height, width)
+
+  rooms[0] = createRoom(0, 0, 5, 5);
+  rooms[1] = createRoom(1, 15, 2, 10);
+  rooms[2] = createRoom(7, 8, 3, 13);
+  rooms[3] = createRoom(14, 25, 4, 7);
+  rooms[4] = createRoom(15, 4, 3, 3);
+
   drawRoom(rooms[0]);
-
-  rooms[1] = createRoom(2, 40, 6, 8);
   drawRoom(rooms[1]);
-
-  rooms[2] = createRoom(10, 40, 6, 12);
   drawRoom(rooms[2]);
+  drawRoom(rooms[3]);
+  drawRoom(rooms[4]);
 
-  connectDoors(rooms[0]->doors[3], rooms[2]->doors[1]);
-  connectDoors(rooms[1]->doors[2], rooms[0]->doors[0]);
+
+  // doors
+  // 0 -> top
+  // 1 -> left
+  // 2 -> bottom
+  // 3 -> right
+
+  connectDoors(rooms[0]->doors[3], rooms[1]->doors[1]);
+  connectDoors(rooms[1]->doors[2], rooms[2]->doors[0]);
+  connectDoors(rooms[2]->doors[3], rooms[3]->doors[0]);
+  connectDoors(rooms[3]->doors[1], rooms[4]->doors[3]);
 
   return rooms;
 }
@@ -50,8 +64,3 @@ char ** saveLevelPositions() {
 
   return positions;
 }
-
-
-
-
-

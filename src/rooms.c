@@ -7,8 +7,11 @@ Room * createRoom(int y, int x, int height, int width) {
   newRoom->position.x = x;
   newRoom->position.y = y;
 
-  newRoom->height = height;
-  newRoom->width = width;
+  // +2 is to account for walls
+  // 1 top wall & 1 bottom wall
+  // 1 left wall && 1 right wall
+  newRoom->height = (height + 2);
+  newRoom->width = (width + 2);
 
   newRoom->doors = malloc(sizeof(Position) * 4);
 
