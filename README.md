@@ -33,6 +33,7 @@ Target: x86_64-apple-darwin15.6.0
 
 ## References
 
+- [/r/roguelikedev](https://www.reddit.com/r/roguelikedev)
 - [Reference docs](docs/references)
 - [Rogue panel - Glenn Wichman, Michael Toy & Ken Arnold](https://www.youtube.com/watch?v=4IkrZkUV01I)
 - http://roguebasin.roguelikedevelopment.org/index.php?title=Main_Page
