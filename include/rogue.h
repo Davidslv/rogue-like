@@ -2,6 +2,7 @@
 #define ROGUE_H
 
 #include <stdlib.h>
+#include <stdbool.h>
 #include <ncurses.h>
 #include <time.h>
 
@@ -19,6 +20,7 @@ typedef struct Level {
 
 typedef struct Position {
   int x, y;
+  bool connected;
 } Position;
 
 typedef struct Room {
@@ -60,6 +62,8 @@ Level * createLevel(int level);
 // room functions
 Room * createRoom(int y, int x, int height, int width);
 int drawRoom(Room * room);
+
+// passage functions
 int connectDoors(Position * doorOne, Position * doorTwo);
 
 // player functions

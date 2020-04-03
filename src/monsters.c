@@ -43,8 +43,8 @@ Monster * selectMonster(int level) {
     case 0: // snake
     default:
       return createMonster('S', 2, 1, 1, 1, 1);
-    case 1: // gobling
-      return createMonster('G', 4, 2, 1, 3, 2);
+    // case 1: // gobling
+      // return createMonster('G', 4, 2, 1, 3, 2);
     case 2: // orc
       return createMonster('O', 12, 5, 1, 4, 1);
   }
@@ -89,7 +89,7 @@ int moveMonsters(Level * level) {
       pathfindingSeek(monster->position, level->player->position);
       mvprintw(monster->position->y, monster->position->y, monster->string);
     }
-    
+
   }
 
   return 1;
